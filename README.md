@@ -21,6 +21,7 @@ Therefore, OmniAI Exporter strictly adheres to a **"100% Local Browser Execution
 * 💻 **Native Code Accurate Recognition**: Perfectly preserves original code line breaks, performs cross-node language tag extraction, and completely eliminates line number pollution.
 * 📊 **Table Anti-Fragmentation**: Employs a dimensionality-reduction algorithm for complex nested tables (e.g., `<th><div>`) to ensure exported Markdown tables are perfectly aligned and intact.
 * 🎯 **Seamless Multi-Platform Adaptation**: Utilizes Virtual List scanning and customized radar detection to accurately distinguish User and AI message sequences without cross-talk.
+* 🧮 **Perfect Math & Table Rendering**: Writing papers or studying algorithms? Our extension natively supports LaTeX / KaTeX math formulas, ensuring equations are rendered flawlessly in PDF and Markdown without garbling. Employs a dimensionality-reduction algorithm to keep complex nested tables 100% perfectly aligned!
 
 ## 📥 Export Formats & Roadmap
 
