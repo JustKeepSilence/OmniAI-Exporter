@@ -52,7 +52,7 @@ Since this is currently a 1.0 Developer Version, please install it via "Load unp
 
 1. Clone this repository to your local machine:
    ```bash
-   git clone [https://github.com/YourUsername/OmniAI-Exporter.git](https://github.com/YourUsername/OmniAI-Exporter.git)
+   git clone [https://github.com/JustKeepSilence/OmniAI-Exporter.git](https://github.com/JustKeepSilence/OmniAI-Exporter.git)
    ```
 2. Navigate to the project directory and install dependencies:
    ```bash
