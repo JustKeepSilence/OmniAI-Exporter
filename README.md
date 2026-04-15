@@ -46,7 +46,7 @@ Currently, it perfectly supports the Web versions of the most powerful mainstrea
 * [x] **DeepSeek**
 * [x] **Tencent Yuanbao** * [x] **Alibaba Qianwen** * [x] **Doubao** * [x] **Gemini**
 
-## 🛠️ Installation
+## 🛠️ Installation From Source
 
 Since this is currently a 1.0 Developer Version, please install it via "Load unpacked":
 
