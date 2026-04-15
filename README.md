@@ -42,7 +42,10 @@ Currently, it perfectly supports the Web versions of the most powerful mainstrea
 
 * [x] **ChatGPT** & **OpenAI**
 * [x] **DeepSeek**
-* [x] **Tencent Yuanbao** * [x] **Alibaba Qianwen** * [x] **Doubao** * [x] **Gemini**
+* [x] **Tencent Yuanbao**
+* [x] **Alibaba Qianwen** 
+* [x] **Doubao** 
+* [x] **Gemini**
 
 ## 🛠️ Installation From Source
 
