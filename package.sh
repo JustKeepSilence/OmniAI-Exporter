@@ -1,0 +1,1 @@
+cd dist && zip -r ../OmniAI-Exporter-v1.0.0.zip *

@@ -1,0 +1,234 @@
+{
+  "pluginName": {
+    "message": "OmniAI Exporter"
+  },
+  "pluginDesc": {
+    "message": "A 100% localized, all-in-one AI chat exporter supporting PDF, Markdown, and isolated code blocks."
+  },
+  "contactName": {
+    "message": "ContactMe"
+  },
+  "smartExtract": {
+    "message": "Smart Code Extraction"
+  },
+  "smartExtractDesc": {
+    "message": "Auto-detect and extract code into separate files"
+  },
+  "customSelection": {
+    "message": "Custom Selection"
+  },
+  "customSelectionDesc": {
+    "message": "Enter selection mode to pick specific chat bubbles to export."
+  },
+  "startSelection": {
+    "message": "Select Messages"
+  },
+  "oneClickExport": {
+    "message": "Quick Export"
+  },
+  "btnCopy": {
+    "message": "📋 Copy Plain Text"
+  },
+  "exportTxt": {
+    "message": "Text"
+  },
+  "exportImg": {
+    "message": "Screenshot"
+  },
+  "advancedSettings": {
+    "message": "⚙️ Export Preferences"
+  },
+  "cfgExcludeUser": {
+    "message": "AI Answers Only"
+  },
+  "cfgIncludeMeta": {
+    "message": "Include Metadata"
+  },
+  "cfgAutoToc": {
+    "message": "Generate PDF Bookmarks"
+  },
+  "windowMesaage": {
+    "message": "Enjoying the efficiency boost? Star this project on GitHub! Feel free to report bugs or suggest new features anytime."
+  },
+  "logName": {
+    "message": "[OmniAI]Log"
+  },
+  "clearButtonName": {
+    "message": "Clear"
+  },
+  "clearMemoory": {
+    "message": "Clear Memory"
+  },
+  "githubName": {
+    "message": "GitHub(Star Me~)"
+  },
+  "bilibiliName": {
+    "message": "BiliBili(Subscriptions)"
+  },
+  "youtubeName": {
+    "message": "YouTube(Subscriptions)"
+  },
+  "emailName": {
+    "message": "Contact Me By Email"
+  },
+  "incrementalName": {
+    "message": "🚀Incremental Memory Export"
+  },
+  "incrementalDescriptionName": {
+    "message": "Enable incremental export for new messages on the current page"
+  },
+  "openLogName": {
+    "message": "Enable Logging"
+  },
+  "pdfEngineName": {
+    "message": "PDF Rendering Engine"
+  },
+  "pdfEngineInfluenceName": {
+    "message": "Change how your exports look and how they are downloaded"
+  },
+  "printName": {
+    "message": "Native HD Version"
+  },
+  "printMessageName": {
+    "message": "(Native PDF Download (Requires manual save, perfect layout))"
+  },
+  "simpleName": {
+    "message": "Pure & Simple"
+  },
+  "simpleMessageName": {
+    "message": "(Html2PDF Engine: May cause lag during export, with potential slight clipping at page breaks)"
+  },
+  "chooseContentName": {
+    "message": "Select Export Content"
+  },
+  "chooseContentMessageName": {
+    "message": "Select Chat Blocks"
+  },
+  "selelctAllName": {
+    "message": "Select All"
+  },
+  "unSelectAllName": {
+    "message": "Invert Selection"
+  },
+  "onlyAISelectName": {
+    "message": "AI Only"
+  },
+  "selectedName": {
+    "message": "Selected"
+  },
+  "selectedItemName": {
+    "message": "Items"
+  },
+  "picName": {
+    "message": "PNG"
+  },
+  "confirmName": {
+    "message": "Confirm"
+  },
+  "feedBackName": {
+    "message": "👋 Feedback & Suggestions"
+  },
+  "handleName": {
+    "message": "Processing... This may take a while"
+  },
+  "iniName": {
+    "message": "Initializing export engine..."
+  },
+  "tipExportPdfName": {
+    "message": "Native PDF Download (Requires manual save, perfect layout)"
+  },
+  "tipExportmdName": {
+    "message": "Extracts pure text retaining structured layout, ideal for knowledge bases"
+  },
+  "tipExportTxtName": {
+    "message": "Export Pure Txt File"
+  },
+  "tipExportWordName": {
+    "message": "Export Word File"
+  },
+  "tipExportPicName": {
+    "message": "Export geek-style long image (Please be patient if chat is long)"
+  },
+  "tipExportJsonName": {
+    "message": "Export Json File"
+  },
+  "log_incremental_start_message": {
+    "message": "🔄Open Incremental Memory Mode"
+  },
+  "log_incremental_pause_message": {
+    "message": "⏸️Incremental Memory paused (underlying data remains intact)"
+  },
+  "log_incremental_clear_message": {
+    "message": "🧹Incremental memory reset. Next export: Full Message"
+  },
+  "log_engine_change_message": {
+    "message": "Switched PDF rendering engine to: $ENGINE$",
+    "placeholders": {
+      "engine": {
+        "content": "$1"
+      }
+    }
+  },
+  "log_incremental_message": {
+    "message": "All Messages have been exported under incremental mode"
+  },
+  "log_nativePdfEngine_message": {
+    "message": "Starting Native Pdf Engine"
+  },
+  "log_htmlPdfEngine_message": {
+    "message": "Starting Html2Pdf Pdf Engine"
+  },
+  "log_incremental_position_message": {
+    "message": "Memory export location updated for incremental mode"
+  },
+  "log_error_message": {
+    "message": "❌ Export failed. Reason: $ERR$",
+    "placeholders": {
+      "err": {
+        "content": "$1"
+      }
+    }
+  },
+  "log_unsupported_message": {
+    "message": "Unsupported Site || Empty Message!"
+  },
+  "log_empty_message": {
+    "message": "⚠️Nothing extracted"
+  },
+  "log_export_message": {
+    "message": "📦Exporting..."
+  },
+  "log_select_message": {
+    "message": "Please select at least one item"
+  },
+  "log_savePdf_message": {
+    "message": "Please Save Pdf file on new windows"
+  },
+  "log_success_message": {
+    "message": "✅Ok"
+  },
+  "log_picStart_messgae": {
+    "message": "Starting Html2Canvas Engine"
+  },
+  "log_markdownEngine_message": {
+    "message": "Starting Markdown Engine"
+  },
+  "log_markdownTransfer_message": {
+    "message": "Convert Message to MarkDown File"
+  },
+  "log_markdownOk_message": {
+    "message": "Conversion complete.Building file Blob"
+  },
+  "log_txtStart_message": {
+    "message": "Converting Messages to text"
+  },
+  "log_jsonStart_message": {
+    "message": "Converting Messages to json"
+  },
+  "log_wordStart_message": {
+    "message": "Starting Word Engine"
+  },
+  "log_codeStart_message": {
+    "message": "🚀Starting Code Extracting Engine"
+  }
+}

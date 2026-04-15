@@ -1,0 +1,232 @@
+{
+  "pluginName": {
+    "message": "OmniAI Exporter"
+  },
+  "pluginDesc": {
+    "message": "100% 本地化运行的全能 AI 网页对话导出工具,支持导出PDF、Markdown及分离代码块。"
+  },
+  "contactName": {
+    "message": "联系作者"
+  },
+  "smartExtract": {
+    "message": "智能提取代码"
+  },
+  "smartExtractDesc": {
+    "message": "自动分离提取代码,独立导出"
+  },
+  "customSelection": {
+    "message": "自定义选择"
+  },
+  "customSelectionDesc": {
+    "message": "进入选择模式，自由勾选需要导出的对话内容。"
+  },
+  "startSelection": {
+    "message": "开启选择"
+  },
+  "oneClickExport": {
+    "message": "一键导出"
+  },
+  "btnCopy": {
+    "message": "📋 复制纯文本"
+  },
+  "exportTxt": {
+    "message": "文本"
+  },
+  "exportImg": {
+    "message": "长截图"
+  },
+  "advancedSettings": {
+    "message": "⚙️ 导出偏好设置"
+  },
+  "cfgExcludeUser": {
+    "message": "仅导出 AI 回答"
+  },
+  "cfgIncludeMeta": {
+    "message": "包含元数据"
+  },
+  "cfgAutoToc": {
+    "message": "自动生成 PDF 目录"
+  },
+  "windowMesaage": {
+    "message": "如果这个插件极大地提升了你的效率,欢迎给项目点个Star!遇到Bug或有新功能建议,也随时欢迎找我~"
+  },
+  "logName": {
+    "message": "[OmniAI]日志"
+  },
+  "clearButtonName": {
+    "message": "清除"
+  },
+  "clearMemoory": {
+    "message": "清除记忆"
+  },
+  "githubName": {
+    "message": "GitHub(求Star)"
+  },
+  "bilibiliName": {
+    "message": "B站(关注动态)"
+  },
+  "youtubeName": {
+    "message": "YouTube(视频教程)"
+  },
+  "emailName": {
+    "message": "发送邮件(深度交流与反馈)"
+  },
+  "incrementalName":{
+    "message": "🚀增量记忆导出"
+  },
+  "incrementalDescriptionName":{
+    "message": "开启后，当前页面每次仅导出新增的对话"
+  },
+  "openLogName":{
+    "message": "开启运行日志"
+  },
+  "pdfEngineName":{
+    "message": "PDF渲染引擎"
+  },
+  "pdfEngineInfluenceName":{
+    "message": "影响导出排版与下载方式"
+  },
+  "printName":{
+    "message": "原生高清版"
+  },
+  "printMessageName":{
+    "message": "(原生PDF下载,需确认保存但排版完美)"
+  },
+  "simpleName":{
+    "message": "极简纯净版"
+  },
+  "simpleMessageName":{
+    "message": "(Html2PDF引擎下载,会卡顿且跨页处可能有轻微截断)"
+  },
+  "chooseContentName":{
+    "message": "选择导出内容"
+  },
+  "chooseContentMessageName":{
+    "message": "请勾选你需要导出的对话块"
+  },
+  "selelctAllName":{
+    "message": "全选"
+  },
+  "unSelectAllName":{
+    "message": "反选"
+  },
+  "onlyAISelectName":{
+    "message": "仅选AI"
+  },
+  "selectedName":{
+    "message": "已选择"
+  },
+  "selectedItemName":{
+    "message": "项"
+  },
+  "picName":{
+    "message": "图片"
+  },
+  "confirmName":{
+    "message": "确认导出"
+  },
+  "feedBackName":{
+    "message": "👋 交流与反馈"
+  },
+  "handleName":{
+    "message": "正在处理,预计耗时较长..."
+  },
+  "iniName":{
+    "message": "正在初始化导出引擎..."
+  },
+  "tipExportPdfName": {
+    "message": "原生PDF下载,需确认保存但排版完美"
+  },
+  "tipExportmdName":{
+    "message": "提取纯净文本，保留结构化排版，适合知识库"
+  },
+  "tipExportTxtName":{
+    "message": "最轻量级的纯文本无格式导出"
+  },
+  "tipExportWordName":{
+    "message": "导出为可编辑的Word文档"
+  },
+  "tipExportPicName":{
+    "message": "导出极客风长图(对话内容多时请耐心等待)"
+  },
+  "tipExportJsonName":{
+    "message": "导出包含角色标签的结构化数据"
+  },
+  "log_incremental_start_message":{
+    "message": "🔄已开启增量记忆模式"
+  },
+  "log_incremental_pause_message":{
+    "message": "⏸️已暂停增量记忆(底层数据依然保留)"
+  },
+  "log_incremental_clear_message":{
+    "message": "🧹已彻底清空当前对话的增量记忆，下次将全量导出"
+  },
+  "log_engine_change_message": {
+    "message": "切换PDF渲染引擎为: $ENGINE$",
+    "placeholders": {
+      "engine": {
+        "content": "$1"
+      }
+    }
+  },
+  "log_incremental_message":{
+    "message": "增量导出模式下所有的数据已经导出过"
+  },
+  "log_nativePdfEngine_message":{
+    "message": "正在启动[原生高清引擎]"
+  },
+  "log_htmlPdfEngine_message":{
+    "message": "正在启动[Html2Pdf引擎]"
+  },
+  "log_incremental_position_message":{
+    "message": "增量导出模式下已更新记忆导出位置"
+  },
+  "log_error_message":{
+    "message": "❌ 导出失败，原因为: $ERR$",
+    "placeholders": {
+      "err": { "content": "$1" }
+    }
+  },
+  "log_unsupported_message":{
+    "message": "当前网站不受支持，或未找到对话内容!"
+  },
+  "log_empty_message":{
+    "message": "⚠️未提取到任何内容"
+  },
+  "log_export_message":{
+    "message": "📦 准备进行一键导出..."
+  },
+  "log_select_message":{
+    "message": "请至少选择一条记录"
+  },
+  "log_savePdf_message":{
+    "message": "请在弹窗中选择保存PDF"
+  },
+  "log_success_message":{
+    "message": "✅成功"
+  },
+  "log_picStart_messgae":{
+    "message": "正在构建极客风长截图画布"
+  },
+  "log_markdownEngine_message":{
+    "message": "正在初始化 Markdown 转换引擎"
+  },
+  "log_markdownTransfer_message":{
+    "message": "开始转换markdown数据"
+  },
+  "log_markdownOk_message":{
+    "message": "转换完成，正在构建文件 Blob"
+  },
+  "log_txtStart_message":{
+    "message": "正在转换为纯文本(TXT)"
+  },
+  "log_jsonStart_message":{
+    "message": "正在打包结构化JSON数据"
+  },
+  "log_wordStart_message":{
+    "message": "正在启动Word文档构建引擎"
+  },
+  "log_codeStart_message":{
+    "message": "🚀启动代码下载引擎"
+  }
+}

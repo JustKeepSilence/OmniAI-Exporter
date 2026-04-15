@@ -1,0 +1,247 @@
+<div class="omni-fab" id="fab" title="OmniAI Exporter">📦</div>
+
+<div class="omni-sidebar" id="sidebar">
+
+  <div class="sidebar-header">
+    <h2 class="sidebar-title" data-i18n="pluginName">📦OmniAI Exporter</h2>
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <button class="feedback-btn" id="btn-feedback">💬<span data-i18n="contactName"></span></button>
+      <button class="close-btn" id="close-btn">×</button>
+    </div>
+  </div>
+
+  <div class="sidebar-content">
+
+    <div class="platform-row">
+      <div class="platform-icon icon-slot" title="ChatGPT" data-icon="CHATGPT"></div>
+      <div class="platform-icon icon-slot" title="Gemini" data-icon="GEMINI"></div>
+      <div class="platform-icon icon-slot" title="豆包" data-icon="DOUBAO"></div>
+      <div class="platform-icon icon-slot" title="千问" data-icon="QIANWEN"></div>
+      <div class="platform-icon icon-slot" title="元宝" data-icon="YUANBAO"></div>
+      <div class="platform-icon icon-slot" title="DeepSeek" data-icon="DEEPSEEK"></div>
+    </div>
+
+    <div class="features-section">
+      <div class="feature-banner" id="btn-extract-code" style="cursor: pointer; transition: transform 0.1s;"
+        onmousedown="this.style.transform='scale(0.98)'" onmouseup="this.style.transform='scale(1)'">
+        <div class="banner-icon">🎯</div>
+        <div class="banner-text">
+          <div class="banner-title"><span data-i18n="smartExtract"></span> <span class="badge">Code</span></div>
+          <div class="banner-desc" data-i18n="smartExtractDesc"></div>
+        </div>
+      </div>
+
+      <div class="feature-card selection-card">
+        <div class="card-header">
+          <h4 class="card-title" data-i18n="customSelection"></h4>
+          <span class="badge secondary">New</span>
+        </div>
+        <div class="card-body">
+          <div class="card-desc" data-i18n="customSelectionDesc"></div>
+          <button class="action-btn-outline" id="btn-selection-mode" data-i18n="startSelection"></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="status-section" id="status-area"
+      style="display: none; flex-direction: column; background: #0f172a; border: 1px solid #1e293b; border-radius: 8px; overflow: hidden; height: 160px; margin-top: 15px;">
+      <div class="log-header"
+        style="background: #1e293b; padding: 6px 12px; font-size: 12px; font-weight: 600; color: #94a3b8; border-bottom: 1px solid #334155; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between;">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span
+            style="width: 8px; height: 8px; background: #10b981; border-radius: 50%; box-shadow: 0 0 8px #10b981;"></span>
+          <span data-i18n="logName"></span>
+        </div>
+        <button id="btn-clear-log"
+          style="background: transparent; border: none; color: #64748b; cursor: pointer; font-size: 10px; padding: 2px 6px; border-radius: 4px; transition: all 0.2s;"
+          onmouseover="this.style.color='#e2e8f0';this.style.background='#334155'"
+          onmouseout="this.style.color='#64748b';this.style.background='transparent'" data-i18n="clearButtonName">
+        </button>
+      </div>
+      <div class="log-console" id="log-console"
+        style="flex: 1; overflow-y: auto; padding: 10px; font-family: 'Cascadia Code', Consolas, monospace; font-size: 11px; color: #e2e8f0; line-height: 1.6;">
+      </div>
+    </div>
+
+    <div class="export-section">
+      <div class="section-header" style="display: flex; justify-content: space-between; align-items: center;">
+        <span class="section-title" data-i18n="oneClickExport"></span>
+        
+        <button id="btn-clear-memory"
+          style="background: transparent; border: none; color: #94a3b8; font-size: 11px; cursor: pointer; display: flex; align-items: center; gap: 4px; padding: 4px 6px; border-radius: 4px; transition: all 0.2s;">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"></path>
+          </svg>
+          <span data-i18n="clearMemoory"></span>
+        </button>
+      </div>
+
+      <div class="grid-container">
+        <button class="grid-btn" id="btn-pdf" data-i18n-tooltip="tipExportPdfName"><span class="grid-icon icon-slot pdf-color" data-icon="PDF"></span><span
+            class="grid-label">PDF</span></button>
+        <button class="grid-btn" id="btn-md" data-i18n-tooltip="tipExportmdName"><span class="grid-icon md-color icon-slot"
+            data-icon="MARKDOWN"></span><span class="grid-label">Markdown</span></button>
+        <button class="grid-btn" id="btn-txt" data-i18n-tooltip="tipExportTxtName"><span class="grid-icon txt-color icon-slot" data-icon="TXT"
+          ></span><span
+            class="grid-label" data-i18n="exportTxt"></span></button>
+        <button class="grid-btn" id="btn-docx" style="position: relative;display: none;" data-i18n-tooltip="tipExportWordName">
+          <span class="grid-icon docx-color icon-slot" data-icon="DOCX"></span>
+          <span class="grid-label">Docx</span>
+          <span class="ws-beta-badge">Beta</span>
+        </button>
+        <button class="grid-btn" id="btn-img" data-i18n-tooltip="tipExportPicName" style="display: none;"><span class="grid-icon img-color icon-slot" 
+            data-icon="PICTURE"></span><span class="grid-label" data-i18n="exportImg"></span></button>
+        <button class="grid-btn" id="btn-json" data-i18n-tooltip="tipExportJsonName"><span class="grid-icon json-color icon-slot"
+            data-icon="JSON"></span><span class="grid-label">Json</span></button>
+      </div>
+    </div>
+
+    <details class="advanced-settings">
+      <summary class="settings-summary" data-i18n="advancedSettings"></summary>
+      <div class="settings-panel">
+        <div class="setting-row">
+          <div class="setting-info">
+            <div class="setting-label" data-i18n="incrementalName"></div>
+            <div class="setting-desc" style="font-size: 11px; color: #9ca3af; margin-top: 2px;" data-i18n="incrementalDescriptionName"></div>
+          </div>
+          <label class="switch"><input type="checkbox" id="cfg-incremental"><span class="slider"></span></label>
+        </div>
+        <div class="setting-row">
+          <div class="setting-info">
+            <div class="setting-label" data-i18n="openLogName"></div>
+          </div>
+          <label class="switch"><input type="checkbox" id="cfg-logging" checked><span class="slider"></span></label>
+        </div>
+        <div class="setting-row">
+          <div class="setting-info">
+            <div class="setting-label" data-i18n="cfgExcludeUser"></div>
+          </div>
+          <label class="switch"><input type="checkbox" id="cfg-exclude-user"><span class="slider"></span></label>
+        </div>
+        <div class="setting-row">
+          <div class="setting-info">
+            <div class="setting-label" data-i18n="cfgIncludeMeta"></div>
+          </div>
+          <label class="switch"><input type="checkbox" id="cfg-meta" checked><span class="slider"></span></label>
+        </div>
+        <div class="setting-divider" style="height: 1px; background: #f0f0f0; margin: 12px 0;"></div>
+        
+        <!-- Html2PDF Engine May cause lag during export, with potential slight clipping at page breaks so we do not support in current v1.0 -->
+        <div class="setting-row" style="flex-direction: column; align-items: flex-start; gap: 8px;display: none;">
+          <div class="setting-info">
+            <div class="setting-label" data-i18n="pdfEngineName"></div>
+            <div class="setting-desc" style="font-size: 11px; color: #9ca3af; margin-top: 2px;" data-i18n="pdfEngineInfluenceName"></div>
+          </div>
+          <div class="engine-selector"
+            style="display: flex; flex-direction: column; gap: 10px; width: 100%; margin-top: 4px;">
+            <label class="radio-label"
+              style="display: flex; align-items: flex-start; gap: 8px; font-size: 12px; cursor: pointer; line-height: 1.4;">
+              <input type="radio" name="pdf-engine" value="native" id="engine-native" checked style="margin-top: 2px;">
+              <span>💎 <strong data-i18n="printName"></strong><span data-i18n="printMessageName"></span></span>
+            </label>
+            <label class="radio-label"
+              style="display: flex; align-items: flex-start; gap: 8px; font-size: 12px; cursor: pointer; line-height: 1.4;">
+              <input type="radio" name="pdf-engine" value="html2pdf" id="engine-md" style="margin-top: 2px;">
+              <span style="color: #6b7280;">🚀 <strong data-i18n="simpleName"></strong><span data-i18n="simpleMessageName"></span></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </details>
+
+  </div>
+</div>
+
+<div class="omni-workspace" id="omni-workspace" style="display: none;">
+  <div class="workspace-overlay" id="workspace-overlay"></div>
+
+  <div class="workspace-panel">
+    <div class="workspace-header">
+      <div class="workspace-title">
+        <span style="font-size: 20px;">📦</span>
+        <div>
+          <h3 style="margin: 0; color: #1e293b; font-size: 16px;" data-i18n="chooseContentName"></h3>
+          <p style="margin: 0; color: #64748b; font-size: 12px; font-weight: normal;" data-i18n="chooseContentMessageName"></p>
+        </div>
+      </div>
+      <div class="workspace-actions">
+        <button id="ws-btn-select-all" class="ws-btn outline" data-i18n="selelctAllName"></button>
+        <button id="ws-btn-invert" class="ws-btn outline" data-i18n="unSelectAllName"></button>
+        <button id="ws-btn-select-ai" class="ws-btn outline"
+          style="color: #10b981; border-color: #a7f3d0; background: #ecfdf5;" data-i18n="onlyAISelectName"></button>
+        <button id="ws-btn-close" class="ws-btn icon-btn">✕</button>
+      </div>
+    </div>
+
+    <div class="workspace-content" id="workspace-list">
+    </div>
+
+    <div class="workspace-footer">
+      <div class="ws-status" >
+        <span data-i18n="selectedName"></span> <strong id="ws-sel-count" style="color: #10b981; font-size: 18px;">0</strong> <span data-i18n="selectedItemName"></span>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 12px;">
+
+        <div class="ws-format-selector" id="ws-format-selector">
+          <button class="ws-fmt-btn active" data-fmt="pdf">PDF</button>
+          <button class="ws-fmt-btn" data-fmt="md">MD</button>
+          <button class="ws-fmt-btn" data-fmt="txt">TXT</button>
+          <button class="ws-fmt-btn" data-fmt="docx" style="display: none;">DOCX<span class="ws-beta-badge">Beta</span></button>
+          <button class="ws-fmt-btn" data-fmt="img" data-i18n="picName" style="display: none;"></button>
+          <button class="ws-fmt-btn" data-fmt="json">JSON</button>
+        </div>
+
+        <span id="ws-engine-badge"
+          style="background: #ffffff; color: #64748b; padding: 6px 10px; border-radius: 6px; font-size: 11px; display: flex; align-items: center; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+          display: none;">
+          Engine:Native
+        </span>
+
+        <button id="ws-btn-export" class="ws-btn primary" >
+          <span data-i18n="confirmName"></span> <span style="font-size: 12px; margin-left: 2px;">→</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="omni-modal-overlay" id="feedback-modal" style="display: none;">
+  <div class="omni-modal-content">
+    <div class="modal-header">
+      <h3 style="margin: 0; font-size: 15px; color: #1e293b; display: flex; align-items: center; gap: 6px;" data-i18n="feedBackName">
+        
+      </h3>
+      <button class="modal-close" id="btn-close-feedback">×</button>
+    </div>
+    <div class="modal-body">
+      <p data-i18n="windowMesaage" style="font-size: 12px; color: #64748b; margin-top: 0; margin-bottom: 16px; line-height: 1.5;">
+        
+      </p>
+      <div class="social-links">
+        <a href="https://github.com/" target="_blank" class="social-btn github">
+          <span style="font-size: 16px;">🐙</span><span data-i18n="githubName"></span>
+        </a>
+        <a href="https://space.bilibili.com/" target="_blank" class="social-btn bilibili">
+          <span style="font-size: 16px;">📺</span><span data-i18n="bilibiliName"></span>
+        </a>
+        <a href="https://youtube.com/c/" target="_blank" class="social-btn youtube">
+          <span style="font-size: 16px;">▶️</span><span data-i18n="youtubeName"></span>
+        </a>
+        <a href="mailto:" class="social-btn email">
+          <span style="font-size: 16px;">📧</span><span data-i18n="emailName"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="omni-global-loading" class="omni-loading-overlay" style="display: none;">
+  <div class="loading-card">
+    <div class="spinner-container">
+      <div class="omni-spinner"></div>
+    </div>
+    <div class="loading-title" data-i18n="handleName"></div>
+    <div id="loading-dynamic-text" class="loading-desc" data-i18n="iniName"></div>
+  </div>
+</div>
