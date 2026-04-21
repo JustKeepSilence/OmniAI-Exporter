@@ -7,7 +7,6 @@
     "default_title": "__MSG_pluginName__"
   },
   "permissions": [
-    "activeTab",
     "storage"
   ],
   "content_scripts": [
