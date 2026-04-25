@@ -19,9 +19,9 @@ export class GeminiAdapter implements SiteAdapter {
         const img = document.createElement('img')
         img.src = dataUrl
         img.style.cssText = canvas.style.cssText
-        img.style.maxWidth = '100%' 
+        img.style.maxWidth = '100%'
         img.style.borderRadius = '8px'
-        
+
         if (clonedCanvases[index] && clonedCanvases[index].parentNode) {
           clonedCanvases[index].parentNode?.replaceChild(img, clonedCanvases[index])
         }
@@ -43,12 +43,12 @@ export class GeminiAdapter implements SiteAdapter {
       '.hidden',
       'img[src*="avatar"]',
       'message-actions',
-      'skeleton-loader',      
-      'response-feedback',   
+      'skeleton-loader',
+      'response-feedback',
       'copy-button'
     ]
     garbageSelectors.forEach(sel => {
-      try { clone.querySelectorAll(sel).forEach(node => node.remove()) } catch(e) {}
+      try { clone.querySelectorAll(sel).forEach(node => node.remove()) } catch (e) { }
     })
 
     clone.querySelectorAll('pre').forEach(preNode => {
@@ -82,8 +82,7 @@ export class GeminiAdapter implements SiteAdapter {
       let htmlStr = codeNode.innerHTML
       htmlStr = htmlStr.replace(/<br\s*\/?>/gi, '\n')
       htmlStr = htmlStr.replace(/<\/div>|<\/p>|<\/li>/gi, '\n')
-      htmlStr = htmlStr.replace(/<\/span>(?=\s*<span)/gi, '</span>\n')
-      
+
       const tempDiv = document.createElement('div')
       tempDiv.innerHTML = htmlStr
       let rawText = tempDiv.textContent || ''
@@ -92,10 +91,10 @@ export class GeminiAdapter implements SiteAdapter {
       const cleanPre = document.createElement('pre')
       const cleanCode = document.createElement('code')
       if (langClass) {
-          cleanCode.className = langClass 
+        cleanCode.className = langClass
       }
-      
-      cleanCode.textContent = rawText 
+
+      cleanCode.textContent = rawText
       cleanPre.appendChild(cleanCode)
       preNode.parentNode?.replaceChild(cleanPre, preNode)
     })
@@ -116,15 +115,15 @@ export class GeminiAdapter implements SiteAdapter {
         if (attr.name === 'class' && (node.tagName === 'CODE' || node.tagName === 'PRE')) return
         if (node.tagName === 'IMG' && (attr.name === 'src' || attr.name === 'style')) return
         if (node.tagName === 'SVG' && (attr.name === 'xmlns' || attr.name === 'style')) return
-        
+
         node.removeAttribute(attr.name)
       })
     })
 
     clone.querySelectorAll('div, p, span').forEach(node => {
-        if (!node.textContent?.trim() && !node.querySelector('img') && !node.querySelector('svg')) {
-          node.remove()
-        }
+      if (!node.textContent?.trim() && !node.querySelector('img') && !node.querySelector('svg')) {
+        node.remove()
+      }
     })
 
     return clone.innerHTML.trim()
@@ -135,7 +134,7 @@ export class GeminiAdapter implements SiteAdapter {
     const exportedHashes = isIncremental ? await getExportedMemory(dialogueId) : new Set<string>()
 
     const messages: ChatMessage[] = []
-    const hashesToMark: string[] = [] 
+    const hashesToMark: string[] = []
 
     const elements = document.querySelectorAll('user-query, model-response')
 
@@ -143,7 +142,7 @@ export class GeminiAdapter implements SiteAdapter {
       const htmlEl = el as HTMLElement
       const tagName = htmlEl.tagName.toLowerCase()
       const isUser = tagName === 'user-query'
-      
+
       const pureHtml = this.pureDomClean(htmlEl)
 
       const tempDiv = document.createElement('div')
@@ -160,7 +159,7 @@ export class GeminiAdapter implements SiteAdapter {
       const msgHash = generateHash(text || pureHtml)
 
       if (isIncremental && exportedHashes.has(msgHash)) {
-        return 
+        return
       }
 
       messages.push({
@@ -169,13 +168,13 @@ export class GeminiAdapter implements SiteAdapter {
         html: pureHtml
       })
 
-      hashesToMark.push(msgHash) 
+      hashesToMark.push(msgHash)
     })
 
-    return { 
-      data: messages, 
-      hashesToMark, 
-      dialogueId 
+    return {
+      data: messages,
+      hashesToMark,
+      dialogueId
     }
   }
 }

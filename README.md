@@ -48,9 +48,17 @@ Currently, it perfectly supports the Web versions of the most powerful mainstrea
 * [x] **Doubao** 
 * [x] **Gemini**
 
-## 🛠️ Installation From Source
 
-Since this is currently a 1.0 Developer Version, please install it via "Load unpacked":
+## 🛠️ Installation
+
+### 🌟 Method 1: Install from Chrome Web Store (Recommended)
+OmniAI Exporter is now officially available on the Chrome Web Store! You can install it with just one click and enjoy automatic updates:   
+    
+[![Chrome Web Store](https://img.shields.io/badge/Chrome_Web_Store-Install_Now-blue?logo=google-chrome&logoColor=white&style=for-the-badge)](https://chromewebstore.google.com/detail/omniai-exporter/hoipdfckdiaecdiambhdcapiogdclmhh?hl=en-US&utm_source=ext_sidebar)
+
+### 🛠️ Method 2: Installation From Source (Developer Mode)
+
+If you want to experience the latest features or modify the source code, you can install it via "Load unpacked":
 
 1. Clone this repository to your local machine:
    ```bash
